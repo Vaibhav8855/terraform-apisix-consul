@@ -1,0 +1,21 @@
+gateway:
+  type: LoadBalancer
+  replicas: 1
+  service:
+    type: LoadBalancer
+    ports:
+      - name: http
+        port: 80
+        targetPort: 9080
+      - name: https
+        port: 443
+        targetPort: 9443
+
+etcd:
+  enabled: true
+  replicas: 1
+  persistence:
+    enabled: true
+    storageClass: "default"
+    size: 1Gi
+
