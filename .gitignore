@@ -1,0 +1,12 @@
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.backup
+terraform.tfstate
+terraform.tfstate.backup
+
+# Sensitive config
+kubeconfig.yaml
+*.pem
+*.key
+*.crt
