@@ -1,0 +1,14 @@
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: flask-app-route
+  namespace: flask-app
+spec:
+  http:
+  - name: flask-route
+    match:
+      paths:
+      - /flask/*
+    backend:
+      serviceName: flask-app
+      servicePort: 80

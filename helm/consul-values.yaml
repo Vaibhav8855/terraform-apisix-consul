@@ -12,10 +12,12 @@ ui:
 
 connectInject:
   enabled: true
+  namespaceSelector:
+    matchLabels:
+      consul-injection: enabled
 
 controller:
   enabled: true
 
 client:
   enabled: true
-
